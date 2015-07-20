@@ -1,0 +1,73 @@
+package com.example.jean.photo;
+
+/**
+ * Created by jean on 2015/7/20.
+ */
+public class Images {
+    public final static String[] imageThumbUrls = new String[]{
+            "http://file.rls.huizhuang.com/showcase/2015/07/1436951158972870794.png"
+            ,"http://file.rls.huizhuang.com/showcase/2015/05/1430736835167384233.jpg"
+            ,"http://file.rls.huizhuang.com/showcase/2015/05/1430732149251895812.jpg"
+            ,"http://file.rls.huizhuang.com/build_showcase/2015/07/1436523167522603937.jpg"
+            ,"http://file.rls.huizhuang.com/build_showcase/2015/06/1433295524420670925.png"
+            ,"http://file.rls.huizhuang.com/build_showcase/2015/06/143444745025731171.png"
+            ,"http://file.rls.huizhuang.com/build_showcase/2015/05/1432107639853673137.png"
+            ,"http://file.rls.huizhuang.com/build_showcase/2015/06/1433218137306139950.png"
+            ,"http://file.rls.huizhuang.com/build_showcase/2015/05/1432197267467981549.png"
+            ,"http://file.rls.huizhuang.com/showcase/2015/05/1432110152285312822.jpg",
+            "http://file.rls.huizhuang.com/showcase/2015/05/1432107962653253942.jpeg",
+            "http://file.rls.huizhuang.com/showcase/2015/05/1431075977637190659.jpg",
+            "http://file.rls.huizhuang.com/showcase/2015/05/1431076156962311429.jpg",
+            "http://file.rls.huizhuang.com/showcase/2015/05/1432111091470112541.jpeg",
+            "http://file.rls.huizhuang.com/showcase/2015/05/1432042314955848253.jpg",
+            "http://file.rls.huizhuang.com/showcase/2015/05/1432042458910394293.jpg",
+            "http://file.rls.huizhuang.com/showcase/2015/05/1432108163412502435.jpg",
+            "http://file.rls.huizhuang.com/build_showcase/2015/07/143572063738749278.png",
+            "http://file.rls.huizhuang.com/build_showcase/2015/05/1432045757134432143.png",
+            "http://file.rls.huizhuang.com/build_showcase/2015/06/1434506642730406199.png",
+            "http://file.rls.huizhuang.com/build_showcase/2015/06/1435042777210602741.png",
+            "http://file.rls.huizhuang.com/build_showcase/2015/06/1434696478845106397.png",
+            "http://file.rls.huizhuang.com/build_showcase/2015/05/1432102810804865677.png",
+            "http://file.rls.huizhuang.com/build_showcase/2015/06/1434531034187998879.png",
+            "http://file.rls.huizhuang.com/build_showcase/2015/05/1432022527587783702.png",
+            "http://file.rls.huizhuang.com/build_showcase/2015/05/1432046293686605451.png",
+            "http://file.rls.huizhuang.com/showcase/2015/06/1434702324902659769.jpeg",
+            "http://file.rls.huizhuang.com/build_showcase/2015/05/1432039694986752241.png",
+            "http://file.rls.huizhuang.com/build_showcase/2015/06/1434016891920456237.jpg",
+            "http://file.rls.huizhuang.com/build_showcase/2015/06/1435138343140406975.png",
+            "http://file.rls.huizhuang.com/build_showcase/2015/05/143200602989565437.png",
+            "http://file.rls.huizhuang.com/build_showcase/2015/05/1432040654358120825.png",
+            "http://file.rls.huizhuang.com/build_showcase/2015/05/1432050954756759988.png",
+            "http://file.rls.huizhuang.com/build_showcase/2015/05/1431851128192905903.png",
+            "http://file.rls.huizhuang.com/build_showcase/2015/06/143450348911730200.png",
+            "http://file.rls.huizhuang.com/build_showcase/2015/06/14350239551292433.png",
+            "http://file.rls.huizhuang.com/showcase/2015/05/143107631274315515.jpg",
+            "http://file.rls.huizhuang.com/showcase/2015/03/1425953865961799610.jpg",
+            "http://file.rls.huizhuang.com/build_showcase/2015/05/1432111149958830246.png",
+            "http://file.rls.huizhuang.com/showcase/2015/03/1426064893359134102.jpg",
+            "http://file.rls.huizhuang.com/showcase/2015/02/1423037222198583507.jpg",
+            "http://file.rls.huizhuang.com/showcase/2015/05/1431660509443994615.png",
+            "http://file.rls.huizhuang.com/showcase/2015/05/1431325836934281593.jpg",
+            "http://file.rls.huizhuang.com/showcase/2015/07/1437043854216736240.png",
+            "http://file.rls.huizhuang.com/showcase/2015/03/14260725022446191.jpg",
+            "http://file.rls.huizhuang.com/showcase/2015/02/1423040809569616305.jpg",
+            "http://file.rls.huizhuang.com/showcase/2015/02/1423559457257764926.jpg",
+            "http://file.rls.huizhuang.com/showcase/2015/07/1436951007277237564.png",
+
+            "https://lh6.googleusercontent.com/-8MrjV_a-Pok/URqvFC5repI/AAAAAAAAAbs/9inKTg9fbCE/s160-c/Tenaya%252520Lake.jpg",
+            "https://lh5.googleusercontent.com/-B1HW-z4zwao/URqvFWYRwUI/AAAAAAAAAbs/8Peli53Bs8I/s160-c/The%252520Cave%252520BW.jpg",
+            "https://lh3.googleusercontent.com/-PO4E-xZKAnQ/URqvGRqjYkI/AAAAAAAAAbs/42nyADFsXag/s160-c/The%252520Fisherman.jpg",
+            "https://lh4.googleusercontent.com/-iLyZlzfdy7s/URqvG0YScdI/AAAAAAAAAbs/1J9eDKmkXtk/s160-c/The%252520Night%252520is%252520Coming.jpg",
+            "https://lh6.googleusercontent.com/-G-k7YkkUco0/URqvHhah6fI/AAAAAAAAAbs/_taQQG7t0vo/s160-c/The%252520Road.jpg",
+            "https://lh6.googleusercontent.com/-h-ALJt7kSus/URqvIThqYfI/AAAAAAAAAbs/ejiv35olWS8/s160-c/Tokyo%252520Heights.jpg",
+            "https://lh5.googleusercontent.com/-Hy9k-TbS7xg/URqvIjQMOxI/AAAAAAAAAbs/RSpmmOATSkg/s160-c/Tokyo%252520Highway.jpg",
+            "https://lh6.googleusercontent.com/-83oOvMb4OZs/URqvJL0T7lI/AAAAAAAAAbs/c5TECZ6RONM/s160-c/Tokyo%252520Smog.jpg",
+            "https://lh3.googleusercontent.com/-FB-jfgREEfI/URqvJI3EXAI/AAAAAAAAAbs/XfyweiRF4v8/s160-c/Tufa%252520at%252520Night.jpg",
+            "https://lh4.googleusercontent.com/-vngKD5Z1U8w/URqvJUCEgPI/AAAAAAAAAbs/ulxCMVcU6EU/s160-c/Valley%252520Sunset.jpg",
+            "https://lh6.googleusercontent.com/-DOz5I2E2oMQ/URqvKMND1kI/AAAAAAAAAbs/Iqf0IsInleo/s160-c/Windmill%252520Sunrise.jpg",
+            "https://lh5.googleusercontent.com/-biyiyWcJ9MU/URqvKculiAI/AAAAAAAAAbs/jyPsCplJOpE/s160-c/Windmill.jpg",
+            "https://lh4.googleusercontent.com/-PDT167_xRdA/URqvK36mLcI/AAAAAAAAAbs/oi2ik9QseMI/s160-c/Windmills.jpg",
+            "https://lh5.googleusercontent.com/-kI_QdYx7VlU/URqvLXCB6gI/AAAAAAAAAbs/N31vlZ6u89o/s160-c/Yet%252520Another%252520Rockaway%252520Sunset.jpg",
+            "https://lh4.googleusercontent.com/-e9NHZ5k5MSs/URqvMIBZjtI/AAAAAAAAAbs/1fV810rDNfQ/s160-c/Yosemite%252520Tree.jpg",
+    };
+}
