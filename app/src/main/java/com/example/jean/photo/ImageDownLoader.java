@@ -126,13 +126,13 @@ public class ImageDownLoader {
             con.setDoOutput(true);
             bitmap = BitmapFactory.decodeStream(con.getInputStream());
         }catch (Exception e){
-            e.printStackTrace();
+              e.printStackTrace();
         }finally {
             if(con!=null){
                 con.disconnect();
             }
         }
-        return null;
+        return bitmap;
 
     }
 

@@ -14,37 +14,37 @@ import android.widget.ImageView;
  */
 public class ImageAdapter extends BaseAdapter implements AbsListView.OnScrollListener {
     /**
-     * ÉÏÏÂÎÄÒýÓÃ
+     * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
      */
     private Context mContext;
 
     /**
-     * URLÊý×é
+     * URLï¿½ï¿½ï¿½ï¿½
      */
     private String[] mImageThrumbUrls;
 
     /**
-     * GridView¶ÔÏóµÄÒýÓÃ
+     * GridViewï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
      */
     private GridView mGridView;
 
     /**
-     * Í¼Æ¬ÏÂÔØÆ÷
+     * Í¼Æ¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
      */
     private ImageDownLoader mImageDownLoader;
 
     /**
-     * ÈôÊ×´Î½øÈ¥£¬ÏÈÇëÇóÒ»´ÎÏÂÔØ£¨ÓÃÓÚ½â¾ö½øÈë³ÌÐò²»¹ö¶¯ÆÁÄ»£¬²»»áÏÂÔØÍ¼Æ¬µÄÎÊÌâ£©
+     * ï¿½ï¿½ï¿½×´Î½ï¿½È¥ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½Ø£ï¿½ï¿½ï¿½ï¿½Ú½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ò²»¹ï¿½ï¿½ï¿½ï¿½ï¿½Ä»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í¼Æ¬ï¿½ï¿½ï¿½ï¿½ï¿½â£©
      */
     private boolean isFirstEnter = true;
 
     /**
-     * ÆÁÄ»ÖÐÏÔÊ¾µÄµÚÒ»¸ö itemÎ»ÖÃ
+     * ï¿½ï¿½Ä»ï¿½ï¿½ï¿½ï¿½Ê¾ï¿½Äµï¿½Ò»ï¿½ï¿½ itemÎ»ï¿½ï¿½
      */
     private int mFirstVisibleItem;
 
     /**
-     * Ò»ÆÁÖÐËùÓÐitemµÄ¸öÊý
+     * Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½itemï¿½Ä¸ï¿½ï¿½ï¿½
      */
     private int mVisibleItemCount;
 
@@ -96,18 +96,38 @@ public class ImageAdapter extends BaseAdapter implements AbsListView.OnScrollLis
 
     @Override
     public void onScrollStateChanged(AbsListView view, int scrollState) {
-
+        //ï¿½ï¿½ï¿½ï¿½GridViewï¿½ï¿½Ö¹Ê±ï¿½ï¿½È¥ï¿½ï¿½ï¿½ï¿½Í¼Æ¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê±È¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Øµï¿½ï¿½ï¿½ï¿½ï¿½
+        if(scrollState == AbsListView.OnScrollListener.SCROLL_STATE_IDLE){
+            showImage(mFirstVisibleItem,mVisibleItemCount);
+        }else{
+            mImageDownLoader.cancelTask();
+        }
     }
+
 
     @Override
     public void onScroll(AbsListView view, int firstVisibleItem, int visibleItemCount, int totalItemCount) {
-
+         mFirstVisibleItem = firstVisibleItem;
+        mVisibleItemCount = visibleItemCount;
+        if(isFirstEnter && totalItemCount>0){
+            showImage(mFirstVisibleItem,mVisibleItemCount);
+            isFirstEnter = false;
+        }
     }
 
     private void showImage(int mFirstVisibleItem, int mVisibleItemCount){
         Bitmap bitmap = null;
         for(int i=mFirstVisibleItem;i<mFirstVisibleItem+mVisibleItemCount;i++){
-
+            final String imageUrl = mImageThrumbUrls[i];
+            final ImageView imageView = (ImageView)mGridView.findViewWithTag(imageUrl);
+            bitmap = mImageDownLoader.dowmLoadImage(imageUrl, new ImageDownLoader.onImageLoaderListener() {
+                @Override
+                public void onImageLoaderListener(Bitmap bitmap, String url) {
+                         if(bitmap!=null && imageView!=null){
+                             imageView.setImageBitmap(bitmap);
+                         }
+                }
+            });
         }
     }
 }
